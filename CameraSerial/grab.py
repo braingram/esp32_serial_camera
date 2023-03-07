@@ -8,7 +8,6 @@ import serial
 port = '/dev/ttyUSB0'
 if len(sys.argv) > 1:
     port = sys.argv[1]
-# baud = 115200
 baud = 2000000
 
 
@@ -44,5 +43,3 @@ if __name__ == '__main__':
             continue
         if k == ord('q'):
             break
-    # with open('test.jpg', 'wb') as f:
-    #     f.write(buf)
