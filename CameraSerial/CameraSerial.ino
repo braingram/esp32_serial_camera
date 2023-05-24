@@ -24,7 +24,7 @@ bool isStreaming = false;
 // ===================
 // Select camera model
 // ===================
-#define CAMERA_MODEL_WROVER_KIT // Has PSRAM
+//#define CAMERA_MODEL_WROVER_KIT // Has PSRAM
 //#define CAMERA_MODEL_ESP_EYE // Has PSRAM
 //#define CAMERA_MODEL_ESP32S3_EYE // Has PSRAM
 //#define CAMERA_MODEL_M5STACK_PSRAM // Has PSRAM
@@ -32,7 +32,7 @@ bool isStreaming = false;
 //#define CAMERA_MODEL_M5STACK_WIDE // Has PSRAM
 //#define CAMERA_MODEL_M5STACK_ESP32CAM // No PSRAM
 //#define CAMERA_MODEL_M5STACK_UNITCAM // No PSRAM
-//#define CAMERA_MODEL_AI_THINKER // Has PSRAM
+#define CAMERA_MODEL_AI_THINKER // Has PSRAM
 //#define CAMERA_MODEL_TTGO_T_JOURNAL // No PSRAM
 // ** Espressif Internal Boards **
 //#define CAMERA_MODEL_ESP32_CAM_BOARD
@@ -82,7 +82,7 @@ void setup() {
   if(config.pixel_format == PIXFORMAT_JPEG){
     //if(psramFound()){
       config.jpeg_quality = 10;
-      config.fb_count = 2;
+      config.fb_count = 1;
       config.grab_mode = CAMERA_GRAB_LATEST;
     //} else {
     //  // Limit the frame size when PSRAM is not available
